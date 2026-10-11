@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Tech Hub</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">Student<span>Tech</span>Hub</a>
+    <nav>
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="notes">Notes</button>
+      <button class="nav-link" data-page="quiz">Quiz</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="home" class="page active">
+      <div class="hero">
+        <p class="eyebrow">YOUR LEARNING SPACE</p>
+        <h1>Learn. Practice.<br><span>Build Your Future.</span></h1>
+        <p class="hero-text">
+          Your place to learn programming, explore notes and test your skills.
+        </p>
+        <button class="primary-btn" data-go="notes">Explore Notes →</button>
+        <button class="secondary-btn" data-go="quiz">Start Quiz</button>
+      </div>
+
+      <h2>Explore Subjects</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">C</div>
+          <h3>C Programming</h3>
+          <p>Learn variables, loops and functions.</p>
+          <button class="text-btn" data-note="C">View Notes →</button>
+        </article>
+        <article class="card">
+          <div class="card-icon orange">5</div>
+          <h3>HTML</h3>
+          <p>Build the structure of web pages.</p>
+          <button class="text-btn" data-note="HTML">View Notes →</button>
+        </article>
+        <article class="card">
+          <div class="card-icon purple">#</div>
+          <h3>CSS</h3>
+          <p>Design beautiful responsive websites.</p>
+          <button class="text-btn" data-note="CSS">View Notes →</button>
+        </article>
+        <article class="card">
+          <div class="card-icon yellow">JS</div>
+          <h3>JavaScript</h3>
+          <p>Make websites interactive.</p>
+          <button class="text-btn" data-note="JavaScript">View Notes →</button>
+        </article>
+      </div>
+
+      <div class="feature">
+        <div>
+          <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+          <h2>Ready for a challenge?</h2>
+          <p>Take a quick programming quiz and check your score.</p>
+        </div>
+        <button class="primary-btn" data-go="quiz">Take Quiz →</button>
+      </div>
+    </section>
+
+    <section id="notes" class="page">
+      <p class="eyebrow">LEARN SOMETHING NEW</p>
+      <h1>Programming Notes</h1>
+      <p class="muted">Search a subject or choose a topic below.</p>
+
+      <input id="searchInput" class="search"
+        type="search" placeholder="Search C, HTML, CSS, JavaScript...">
+
+      <div id="notesList" class="notes-grid"></div>
+      <p id="noNotes" class="muted hidden">No matching notes found.</p>
+    </section>
+
+    <section id="quiz" class="page">
+      <p class="eyebrow">PRACTICE MAKES PROGRESS</p>
+      <h1>Programming Quiz</h1>
+      <p class="muted">Answer 5 questions and see your result.</p>
+
+      <div id="quizBox" class="quiz-box">
+        <div class="quiz-top">
+          <span id="questionCount">Question 1 of 5</span>
+          <span id="scoreLabel">Score: 0</span>
+        </div>
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+        <h2 id="questionText"></h2>
+        <div id="options" class="options"></div>
+        <p id="feedback" aria-live="polite"></p>
+        <button id="nextBtn" class="primary-btn" disabled>
+          Next Question →
+        </button>
+      </div>
+      <div id="quizResult" class="quiz-box hidden"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Student Tech Hub | Learn Something Every Day</p>
+  </footer>
+</body>
+</html>
